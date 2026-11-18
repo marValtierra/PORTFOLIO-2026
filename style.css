@@ -116,7 +116,7 @@ h1, h2, h3, h4 { font-family: var(--display); font-weight: 800; line-height: 1.1
 
 /* Imagen Technogym pendiente: estado discreto, sin marco violeta */
 .ph:has(img[src="img/mailing-TG.jpg"]).unavailable { background: var(--panel); min-height: 18rem; display: grid; place-items: center; }
-.ph:has(img[src="img/mailing-TG.jpg"]).unavailable::after { content: "Falta el archivo mailing-TG.jpg"; color: var(--suave); font-size: .85rem; padding: 1rem; }
+.ph:has(img[src="img/mailing-TG.jpg"]).unavailable::after { content: "imgFalta el archivo mailing-TG.jpg"; color: var(--suave); font-size: .85rem; padding: 1rem; }
 .ph.unavailable img { display: none; }
 
 /* ===== Perfil ampliado: mismos colores y tipografías ===== */
