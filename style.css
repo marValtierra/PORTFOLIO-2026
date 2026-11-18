@@ -1,259 +1,3 @@
-/* ===== Variables originales: colores y tipografías preservados ===== */
-
-:root {
-
-  --fondo: #17102a;
-
-  --panel: #231a3f;
-
-  --violeta: #6b52d1;
-
-  --lila: #a592ee;
-
-  --texto: #ece8f8;
-
-  --suave: #b4abd0;
-
-  --hilo-lima: #c6f24e;
-
-  --display: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
-
-  --cuerpo: "Inter", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
-
-}
-*, *::before, *::after { box-sizing: border-box; }
-
-html { scroll-behavior: smooth; color-scheme: dark; }
-
-body { margin: 0; background: var(--fondo); color: var(--texto); font-family: var(--cuerpo); font-size: 1.0625rem; line-height: 1.65; }
-
-a { color: var(--lila); text-underline-offset: .18em; }
-
-a:hover { color: #fff; }
-
-:focus-visible { outline: 3px solid var(--hilo-lima); outline-offset: 3px; }
-
-.skip { position: absolute; left: 1rem; top: -4rem; background: #fff; color: var(--fondo); padding: .6rem 1rem; z-index: 10; }
-
-.skip:focus { top: 1rem; }
-
-h1, h2, h3, h4 { font-family: var(--display); font-weight: 800; line-height: 1.1; margin: 0; }
-
-/* ===== Encabezado original ===== */
-
-.top { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap; max-width: 68rem; margin: 0 auto; padding: 1.5rem 1.5rem 0; }
-
-.top-name { font-family: var(--display); font-weight: 800; font-size: 1.1rem; color: var(--texto); text-decoration: none; }
-
-.top nav { display: flex; gap: 1.5rem; }
-
-.top nav a { color: var(--suave); text-decoration: none; }
-
-.top nav a:hover { color: #fff; text-decoration: underline; }
-
-/* ===== Inicio original ===== */
-
-.hero { max-width: 68rem; margin: 0 auto; padding: 5rem 1.5rem 0; }
-
-.hero h1 { font-size: clamp(2.4rem, 7vw, 5.2rem); letter-spacing: -.025em; max-width: 16ch; }
-
-.lead { max-width: 38rem; margin: 1.75rem 0 3rem; color: var(--suave); font-size: 1.2rem; }
-
-.weave { position: relative; height: 7rem; transform-origin: left; animation: tejer 1.4s ease-out both; background: repeating-linear-gradient(90deg, #3a2a7a 0 1.6rem, #5a41b8 1.6rem 3.2rem, #2a1d52 3.2rem 4.8rem, #8f78ea 4.8rem 6.4rem, var(--hilo-lima) 6.4rem 6.8rem); }
-
-.weave::after { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(0deg, rgba(255,255,255,.18) 0 2px, transparent 2px 6px); }
-
-.weave-thin { height: 1.2rem; animation: none; }
-
-@keyframes tejer { from { transform: scaleX(0); } to { transform: scaleX(1); } }
-
-/* ===== Secciones originales ===== */
-
-.work, .resume, .contact { max-width: 68rem; margin: 0 auto; padding: 6rem 1.5rem 0; }
-
-.work h2, .resume h2, .contact h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom: 2.5rem; }
-
-.ph { position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: repeating-linear-gradient(0deg, rgba(255,255,255,.1) 0 2px, transparent 2px 7px), var(--violeta); }
-
-.ph img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; display: block; }
-
-/* ===== Proyectos originales ===== */
-
-.project { display: grid; grid-template-columns: 1fr; gap: 1.5rem; align-items: center; margin-bottom: 4.5rem; }
-
-.project-text h3 { font-size: 1.7rem; border-left: .5rem solid var(--lila); padding-left: .9rem; }
-
-.role { margin: .75rem 0; color: var(--suave); }
-
-.project-text p:last-child { margin: 0; max-width: 34rem; }
-
-.project-wide { align-items: start; }
-
-.pair { display: grid; grid-template-columns: 1fr; gap: 2rem; }
-
-.pair figure { margin: 0; }
-
-.pair figcaption { margin-top: .9rem; max-width: 30rem; color: var(--suave); }
-
-/* ===== Resume original ===== */
-
-.resume-intro { max-width: 40rem; }
-
-.resume-intro p { margin: 0 0 1.1rem; }
-
-.sub { font-size: 1.35rem; margin: 3rem 0 1.25rem; }
-
-.exp { list-style: none; margin: 0; padding: 0; max-width: 44rem; }
-
-.exp li { display: flex; justify-content: space-between; gap: 1.5rem; padding: .85rem 0; border-top: 1px solid rgba(255,255,255,.14); }
-
-.exp li:last-child { border-bottom: 1px solid rgba(255,255,255,.14); }
-
-.exp span { color: var(--suave); white-space: nowrap; }
-
-.studies { display: grid; grid-template-columns: 1fr; gap: 2.5rem; }
-
-.study h4 { font-size: 1.3rem; margin: 1rem 0 .5rem; }
-
-.study p { margin: 0; color: var(--suave); max-width: 30rem; }
-
-.tools { max-width: 40rem; margin: 0; }
-
-/* ===== Contacto original ===== */
-
-.contact p { max-width: 34rem; margin: 0 0 1rem; }
-
-.mail { font-family: var(--display); font-weight: 800; font-size: clamp(1.4rem, 4.5vw, 2.4rem); color: var(--lila); overflow-wrap: anywhere; }
-
-.mail:hover { color: #fff; }
-
-/* ===== Pie original ===== */
-
-.foot { margin-top: 7rem; }
-
-.foot p { max-width: 68rem; margin: 0 auto; padding: 1.25rem 1.5rem 2rem; color: var(--suave); font-size: .95rem; }
-
-/* ===== Adiciones mínimas: bullets y galería, sin cambiar paleta ===== */
-
-.eyebrow { color: var(--lila); font-size: .85rem; letter-spacing: .08em; font-weight: 600; margin: 0 0 1rem; }
-
-.section-note { color: var(--suave); max-width: 38rem; margin: -1rem 0 2.5rem; font-size: .9rem; }
-
-.project-bullets { margin: 1rem 0 1.5rem; padding-left: 1.4rem; max-width: 43rem; }
-
-.project-bullets li { margin: 0 0 .65rem; padding-left: .15rem; }
-
-.project-bullets li::marker { color: var(--lila); }
-
-.project-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; align-items: start; }
-
-.gallery-item { margin: 0; min-width: 0; }
-
-.gallery-item-featured { grid-row: span 2; }
-
-.gallery-item-featured .ph { aspect-ratio: auto; min-height: 25rem; height: 100%; }
-
-.gallery-item:not(.gallery-item-featured) .ph { aspect-ratio: 4 / 3; }
-
-.gallery-item figcaption { margin-top: .65rem; color: var(--suave); font-size: .9rem; }
-
-.ph.missing::after { content: "Imagen pendiente"; position: absolute; inset: 0; display: grid; place-items: center; color: var(--texto); font-size: .85rem; }
-
-.project-secondary { opacity: .95; }
-
-/* ===== Pantallas grandes originales, adaptadas a galerías ===== */
-
-@media (min-width: 52rem) {
-
-  .hero { padding-top: 7rem; }
-
-  .project { grid-template-columns: 1.1fr 1fr; gap: 3rem; }
-
-  .project-wide { grid-template-columns: 1fr; gap: 2rem; }
-
-  .pair { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
-
-  .studies { grid-template-columns: 1fr 1fr; gap: 3rem; }
-
-}
-
-@media (max-width: 51.99rem) {
-
-  .project-gallery { margin-top: .25rem; }
-
-  .gallery-item-featured .ph { min-height: 18rem; }
-
-}
-
-@media (max-width: 34rem) {
-
-  .top nav { flex-wrap: wrap; gap: .8rem 1.2rem; }
-
-  .project-gallery { gap: .7rem; }
-
-  .gallery-item-featured { grid-column: 1 / -1; grid-row: auto; }
-
-  .gallery-item-featured .ph { min-height: 15rem; aspect-ratio: 4 / 3; }
-
-  .gallery-item figcaption { font-size: .8rem; }
-
-}
-
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .weave { animation: none; } }
-
-
-
-/* ===== Revisión de galerías: sin alterar los colores originales ===== */
-
-.ph { position: relative; width: 100%; height: auto; aspect-ratio: auto; overflow: hidden; background: transparent; border: 0; min-height: 0; }
-
-.ph img { position: static; display: block; width: 100%; height: auto; object-fit: contain; }
-
-.project-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; align-items: start; margin-top: 1.5rem; }
-
-.gallery-item, .gallery-item-featured { grid-row: auto; grid-column: auto; margin: 0; min-width: 0; }
-
-.gallery-item-featured .ph, .gallery-item:not(.gallery-item-featured) .ph { aspect-ratio: auto; min-height: 0; height: auto; }
-
-.gallery-item figcaption { margin-top: .65rem; color: var(--suave); font-size: .9rem; line-height: 1.45; }
-
-/* El mailing conserva su ancho y se puede recorrer sin deformarlo */
-
-.gallery-item--email .ph { max-height: 34rem; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: var(--violeta) transparent; }
-
-.ph.missing { min-height: 12rem; background: var(--panel); }
-
-@media (min-width: 52rem) { .project:has(.project-gallery) { grid-template-columns: minmax(0,1fr); align-items: start; } }
-
-@media (max-width: 40rem) { .project-gallery { grid-template-columns: 1fr; } .gallery-item--email .ph { max-height: 28rem; } }
-
-
-
-/* Imagen Technogym pendiente: estado discreto, sin marco violeta */
-
-.ph:has(img[src="img/mailing-TG.jpg"]).unavailable { background: var(--panel); min-height: 18rem; display: grid; place-items: center; }
-
-.ph:has(img[src="img/mailing-TG.jpg"]).unavailable::after { content: "imgFalta el archivo mailing-TG.jpg"; color: var(--suave); font-size: .85rem; padding: 1rem; }
-
-.ph.unavailable img { display: none; }
-
-
-
-/* ===== Perfil ampliado: mismos colores y tipografías ===== */
-
-.profile-kicker { font-size: .85rem; font-weight: 600; letter-spacing: .08em; color: var(--lila); margin: 0 0 .65rem; }
-
-.profile-location { color: var(--suave); margin: 0 0 2rem; overflow-wrap: anywhere; }
-
-.profile-location a { color: var(--texto); }
-
-.resume-intro { max-width: 48rem; }
-
-.resume .sub { margin-top: 3rem; }
-
-.career-list { display: grid; gap: 1.75rem; }
-
-.career-entry { border-top: 1px solid rgba(255,255,255,.14); padding-top: 1.2rem; }
 
 .career-head { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: .4rem 1.25rem; }
 
@@ -303,114 +47,74 @@ h1, h2, h3, h4 { font-family: var(--display); font-weight: 800; line-height: 1.1
 
 @media(max-width:40rem) { .project-gallery .gallery-item--email .ph { max-height: 28rem; } }
 
-
-
-
 /* ==========================================
-   GRUPO CASCADA — GALERÍA EDITORIAL
+   GRUPO CASCADA — MOSAICO COMPACTO
+   Dos columnas independientes, sin alturas forzadas.
    ========================================== */
-
 .project-gallery.cascada-gallery {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 20px;
+  gap: clamp(14px, 2.5vw, 26px);
   align-items: start;
   width: 100%;
 }
-
-/* Estructura de cada pieza */
-
+.cascada-gallery__column {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  min-width: 0;
+}
 .cascada-gallery .gallery-item {
   margin: 0;
   min-width: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
-
-.cascada-gallery .ph {
+.cascada-gallery .ph,
+.cascada-gallery .gallery-item:not(.gallery-item-featured) .ph {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
   width: 100%;
   height: auto;
   min-height: 0;
   aspect-ratio: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  padding: 0;
+  overflow: visible;
   background: transparent;
 }
-
-/* Imágenes sin recortes ni deformaciones */
-
-.cascada-gallery .ph img {
+.cascada-gallery .ph img,
+.project-gallery.cascada-gallery .ph img {
+  position: static;
   display: block;
-  width: 100%;
   height: auto;
   max-width: 100%;
-  max-height: none;
   object-fit: contain;
-  object-position: center;
-  border-radius: 3px;
+  border: 0;
+  box-shadow: none;
 }
-
-/* Mailings: tamaño reducido */
-
-.cascada-gallery__mailing .ph img,
-.cascada-gallery__spinciti .ph img {
-  width: 76%;
+.project-gallery.cascada-gallery .cascada-gallery__mailing .ph img,
+.project-gallery.cascada-gallery .cascada-gallery__spinciti .ph img {
+  width: 72%;
   max-width: 270px;
 }
-
-/* Campañas: mayor protagonismo */
-
-.cascada-gallery__hero .ph img,
-.cascada-gallery__kambukka .ph img {
+.project-gallery.cascada-gallery .cascada-gallery__hero .ph img,
+.project-gallery.cascada-gallery .cascada-gallery__kambukka .ph img {
   width: 100%;
 }
-
-/* Pies de imagen */
-
 .cascada-gallery .gallery-item figcaption {
-  width: 100%;
-  margin-top: 10px;
+  margin-top: 9px;
   text-align: center;
-  font-size: 12px;
-  line-height: 1.5;
+  color: var(--suave);
+  font-size: .8rem;
+  line-height: 1.45;
 }
-
-/* Tablet */
-
-@media (max-width: 900px) {
-  .project-gallery.cascada-gallery {
-    gap: 16px;
-  }
-
-  .cascada-gallery__mailing .ph img,
-  .cascada-gallery__spinciti .ph img {
-    width: 82%;
-  }
-}
-
-/* Mobile */
-
 @media (max-width: 600px) {
   .project-gallery.cascada-gallery {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 24px;
+    grid-template-columns: 1fr;
+    gap: 22px;
   }
-
-  .cascada-gallery__mailing .ph img,
-  .cascada-gallery__spinciti .ph img {
-    width: 75%;
+  .cascada-gallery__column { gap: 22px; }
+  .project-gallery.cascada-gallery .cascada-gallery__mailing .ph img,
+  .project-gallery.cascada-gallery .cascada-gallery__spinciti .ph img {
+    width: 76%;
     max-width: 300px;
   }
-
-  .cascada-gallery .gallery-item figcaption {
-    margin-top: 8px;
-  }
-}
-
-}
-
 }
