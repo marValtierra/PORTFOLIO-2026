@@ -305,43 +305,24 @@ h1, h2, h3, h4 { font-family: var(--display); font-weight: 800; line-height: 1.1
 
 
 
-/* =====================================
-   GRUPO CASCADA · MOSAICO RESPONSIVE
-   ===================================== */
+
+/* ==========================================
+   GRUPO CASCADA — GALERÍA EDITORIAL
+   ========================================== */
 
 .project-gallery.cascada-gallery {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
+  gap: 20px;
   align-items: start;
-}
-
-/* Orden y posicionamiento */
-.cascada-gallery .cascada-gallery__hero {
-  grid-column: 1;
-  grid-row: 1;
-}
-
-.cascada-gallery .cascada-gallery__mailing {
-  grid-column: 2;
-  grid-row: 1;
-}
-
-.cascada-gallery .cascada-gallery__spinciti {
-  grid-column: 1;
-  grid-row: 2;
-}
-
-.cascada-gallery .cascada-gallery__kambukka {
-  grid-column: 2;
-  grid-row: 2;
-}
-
-/* Contenedores */
-.cascada-gallery .gallery-item {
   width: 100%;
-  min-width: 0;
+}
+
+/* Estructura de cada pieza */
+
+.cascada-gallery .gallery-item {
   margin: 0;
+  min-width: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -353,76 +334,83 @@ h1, h2, h3, h4 { font-family: var(--display); font-weight: 800; line-height: 1.1
   min-height: 0;
   aspect-ratio: auto;
   display: flex;
+  align-items: center;
   justify-content: center;
-  align-items: flex-start;
-  overflow: visible;
+  overflow: hidden;
+  padding: 0;
   background: transparent;
 }
 
-/* Imágenes generales */
+/* Imágenes sin recortes ni deformaciones */
+
 .cascada-gallery .ph img {
   display: block;
   width: 100%;
-  max-width: 100%;
   height: auto;
+  max-width: 100%;
   max-height: none;
   object-fit: contain;
-  object-position: top center;
-  transform: none;
+  object-position: center;
+  border-radius: 3px;
 }
 
-/* Campaña digital y Kambukka */
+/* Mailings: tamaño reducido */
+
+.cascada-gallery__mailing .ph img,
+.cascada-gallery__spinciti .ph img {
+  width: 76%;
+  max-width: 270px;
+}
+
+/* Campañas: mayor protagonismo */
+
 .cascada-gallery__hero .ph img,
 .cascada-gallery__kambukka .ph img {
   width: 100%;
 }
 
-/* Email marketing: tamaño controlado */
-.cascada-gallery__mailing .ph img,
-.cascada-gallery__spinciti .ph img {
-  width: 72%;
-  max-width: 340px;
-  height: auto;
-  object-fit: contain;
-}
-
 /* Pies de imagen */
+
 .cascada-gallery .gallery-item figcaption {
   width: 100%;
-  margin-top: 12px;
+  margin-top: 10px;
   text-align: center;
+  font-size: 12px;
+  line-height: 1.5;
 }
 
 /* Tablet */
+
 @media (max-width: 900px) {
   .project-gallery.cascada-gallery {
-    gap: 18px;
+    gap: 16px;
   }
 
   .cascada-gallery__mailing .ph img,
   .cascada-gallery__spinciti .ph img {
     width: 82%;
-    max-width: 300px;
   }
 }
 
 /* Mobile */
+
 @media (max-width: 600px) {
   .project-gallery.cascada-gallery {
     grid-template-columns: minmax(0, 1fr);
-    gap: 28px;
-  }
-
-  .cascada-gallery .gallery-item {
-    grid-column: 1;
-    grid-row: auto;
+    gap: 24px;
   }
 
   .cascada-gallery__mailing .ph img,
   .cascada-gallery__spinciti .ph img {
-    width: 85%;
-    max-width: 320px;
+    width: 75%;
+    max-width: 300px;
   }
+
+  .cascada-gallery .gallery-item figcaption {
+    margin-top: 8px;
+  }
+}
+
 }
 
 }
