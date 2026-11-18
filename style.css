@@ -310,4 +310,9 @@ h1, h2, h3, h4 { font-family: var(--display); font-weight: 800; line-height: 1.1
     width: 76%;
     max-width: 300px;
   }
+
+  /* Ajuste exclusivo: Diseño freelance */
+.project:has(.cascada-gallery) + .project {
+  margin-top: 2rem;
+}
 }
