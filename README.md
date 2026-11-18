@@ -1,2 +1,2 @@
 # PORTFOLIO-2026
-hi, just a small tech recap
+hola, just a profesional journey recap!
