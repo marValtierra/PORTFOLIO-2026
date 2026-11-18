@@ -100,3 +100,54 @@ h1, h2, h3, h4 { font-family: var(--display); font-weight: 800; line-height: 1.1
   .gallery-item figcaption { font-size: .8rem; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .weave { animation: none; } }
+
+/* ===== Revisión de galerías: sin alterar los colores originales ===== */
+.ph { position: relative; width: 100%; height: auto; aspect-ratio: auto; overflow: hidden; background: transparent; border: 0; min-height: 0; }
+.ph img { position: static; display: block; width: 100%; height: auto; object-fit: contain; }
+.project-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; align-items: start; margin-top: 1.5rem; }
+.gallery-item, .gallery-item-featured { grid-row: auto; grid-column: auto; margin: 0; min-width: 0; }
+.gallery-item-featured .ph, .gallery-item:not(.gallery-item-featured) .ph { aspect-ratio: auto; min-height: 0; height: auto; }
+.gallery-item figcaption { margin-top: .65rem; color: var(--suave); font-size: .9rem; line-height: 1.45; }
+/* El mailing conserva su ancho y se puede recorrer sin deformarlo */
+.gallery-item--email .ph { max-height: 34rem; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: var(--violeta) transparent; }
+.ph.missing { min-height: 12rem; background: var(--panel); }
+@media (min-width: 52rem) { .project:has(.project-gallery) { grid-template-columns: minmax(0,1fr); align-items: start; } }
+@media (max-width: 40rem) { .project-gallery { grid-template-columns: 1fr; } .gallery-item--email .ph { max-height: 28rem; } }
+
+/* Imagen Technogym pendiente: estado discreto, sin marco violeta */
+.ph:has(img[src="img/mailing-TG.jpg"]).unavailable { background: var(--panel); min-height: 18rem; display: grid; place-items: center; }
+.ph:has(img[src="img/mailing-TG.jpg"]).unavailable::after { content: "Falta el archivo mailing-TG.jpg"; color: var(--suave); font-size: .85rem; padding: 1rem; }
+.ph.unavailable img { display: none; }
+
+/* ===== Perfil ampliado: mismos colores y tipografías ===== */
+.profile-kicker { font-size: .85rem; font-weight: 600; letter-spacing: .08em; color: var(--lila); margin: 0 0 .65rem; }
+.profile-location { color: var(--suave); margin: 0 0 2rem; overflow-wrap: anywhere; }
+.profile-location a { color: var(--texto); }
+.resume-intro { max-width: 48rem; }
+.resume .sub { margin-top: 3rem; }
+.career-list { display: grid; gap: 1.75rem; }
+.career-entry { border-top: 1px solid rgba(255,255,255,.14); padding-top: 1.2rem; }
+.career-head { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: .4rem 1.25rem; }
+.career-head h4 { font-size: 1.25rem; }
+.career-head span, .career-role { color: var(--suave); }
+.career-head span { font-size: .9rem; }
+.career-role { margin: .35rem 0 .75rem; }
+.career-entry > p:last-child { margin-bottom: 0; }
+.career-bullets { margin: .75rem 0 0; padding-left: 1.35rem; max-width: 52rem; }
+.career-bullets li { margin-bottom: .55rem; }
+.career-bullets li::marker { color: var(--lila); }
+.resume .studies { row-gap: 2rem; }
+.resume .study h4 { margin-top: 0; }
+.resume .study p + p { margin-top: .55rem; }
+.tools-wide { max-width: 58rem; }
+.contact-actions { margin-top: 1.5rem; }
+.linkedin-button { display: inline-flex; align-items: center; gap: .5rem; border: 1px solid var(--lila); color: var(--texto); padding: .55rem 1rem; text-decoration: none; font-size: .95rem; font-weight: 600; border-radius: .25rem; }
+.linkedin-button:hover { background: var(--panel); color: #fff; }
+
+/* Corrección final: imágenes reales, sin marcos de relleno */
+.project-gallery .ph { background: transparent; border: 0; box-shadow: none; min-height: 0; height: auto; aspect-ratio: auto; }
+.project-gallery .ph img { position: static; width: 100%; height: auto; object-fit: contain; display: block; border: 0; box-shadow: none; }
+.project-gallery .gallery-item--email .ph { max-height: 34rem; overflow-y: auto; overflow-x: hidden; scrollbar-width: thin; }
+.project-gallery .ph.missing { min-height: 12rem; background: #231a3f; }
+.project-gallery .ph.missing::after { content: "Imagen pendiente: revisa la ruta src"; }
+@media(max-width:40rem) { .project-gallery .gallery-item--email .ph { max-height: 28rem; } }
