@@ -303,74 +303,28 @@ h1, h2, h3, h4 { font-family: var(--display); font-weight: 800; line-height: 1.1
 
 @media(max-width:40rem) { .project-gallery .gallery-item--email .ph { max-height: 28rem; } }
 
+
 /* ==========================================
-   GRUPO CASCADA — MOSAICO COMPACTO
-   Dos columnas independientes, sin alturas forzadas.
+   ESPACIADO ENTRE GRUPO CASCADA Y FREELANCE
    ========================================== */
-.project-gallery.cascada-gallery {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: clamp(14px, 2.5vw, 26px);
-  align-items: start;
-  width: 100%;
+
+/* Mayor separación después de la galería */
+
+.project-wide {
+  margin-bottom: 7rem;
 }
-.cascada-gallery__column {
-  display: flex;
-  flex-direction: column;
-  gap: 22px;
-  min-width: 0;
-}
-.cascada-gallery .gallery-item {
-  margin: 0;
-  min-width: 0;
-}
-.cascada-gallery .ph,
-.cascada-gallery .gallery-item:not(.gallery-item-featured) .ph {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  width: 100%;
-  height: auto;
-  min-height: 0;
-  aspect-ratio: auto;
-  overflow: visible;
-  background: transparent;
-}
-.cascada-gallery .ph img,
-.project-gallery.cascada-gallery .ph img {
-  position: static;
-  display: block;
-  height: auto;
-  max-width: 100%;
-  object-fit: contain;
-  border: 0;
-  box-shadow: none;
-}
-.project-gallery.cascada-gallery .cascada-gallery__mailing .ph img,
-.project-gallery.cascada-gallery .cascada-gallery__spinciti .ph img {
-  width: 72%;
-  max-width: 270px;
-}
-.project-gallery.cascada-gallery .cascada-gallery__hero .ph img,
-.project-gallery.cascada-gallery .cascada-gallery__kambukka .ph img {
-  width: 100%;
-}
+
+/* Separación entre imagen y pie de foto */
+
 .cascada-gallery .gallery-item figcaption {
-  margin-top: 9px;
-  text-align: center;
-  color: var(--suave);
-  font-size: .8rem;
-  line-height: 1.45;
+  margin-top: 12px;
 }
+
+/* Ajuste responsive */
+
 @media (max-width: 600px) {
-  .project-gallery.cascada-gallery {
-    grid-template-columns: 1fr;
-    gap: 22px;
-  }
-  .cascada-gallery__column { gap: 22px; }
-  .project-gallery.cascada-gallery .cascada-gallery__mailing .ph img,
-  .project-gallery.cascada-gallery .cascada-gallery__spinciti .ph img {
-    width: 76%;
-    max-width: 300px;
+  .project-wide {
+    margin-bottom: 4.5rem;
   }
 }
+
