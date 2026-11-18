@@ -304,41 +304,125 @@ h1, h2, h3, h4 { font-family: var(--display); font-weight: 800; line-height: 1.1
 @media(max-width:40rem) { .project-gallery .gallery-item--email .ph { max-height: 28rem; } }
 
 
-/* ===== GRUPO CASCADA · Mosaico compacto según wireframe ===== */
+
+/* =====================================
+   GRUPO CASCADA · MOSAICO RESPONSIVE
+   ===================================== */
+
 .project-gallery.cascada-gallery {
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr);
-  gap: 1.25rem 1.5rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
   align-items: start;
-  margin-top: 1.5rem;
 }
-.cascada-gallery .gallery-item { margin: 0; min-width: 0; }
-.cascada-gallery__mailing { grid-column: 1; grid-row: 1; }
-.cascada-gallery__right {
+
+/* Orden y posicionamiento */
+.cascada-gallery .cascada-gallery__hero {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.cascada-gallery .cascada-gallery__mailing {
   grid-column: 2;
   grid-row: 1;
+}
+
+.cascada-gallery .cascada-gallery__spinciti {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.cascada-gallery .cascada-gallery__kambukka {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+/* Contenedores */
+.cascada-gallery .gallery-item {
+  width: 100%;
+  min-width: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
-  min-width: 0;
+  align-items: center;
 }
-.cascada-gallery__kambukka { grid-column: 1 / -1; grid-row: 2; }
-.cascada-gallery .gallery-item .ph {
-  width: 100%; height: auto; min-height: 0; max-height: none;
-  aspect-ratio: auto; overflow: visible; background: transparent;
-  border: 0; display: block;
+
+.cascada-gallery .ph {
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  aspect-ratio: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: visible;
+  background: transparent;
 }
-.cascada-gallery .gallery-item .ph img {
-  display: block; position: static; width: 100%; max-width: 100%;
-  height: auto; max-height: none; object-fit: contain; transform: none;
+
+/* Imágenes generales */
+.cascada-gallery .ph img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+  object-position: top center;
+  transform: none;
 }
+
+/* Campaña digital y Kambukka */
+.cascada-gallery__hero .ph img,
+.cascada-gallery__kambukka .ph img {
+  width: 100%;
+}
+
+/* Email marketing: tamaño controlado */
+.cascada-gallery__mailing .ph img,
+.cascada-gallery__spinciti .ph img {
+  width: 72%;
+  max-width: 340px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Pies de imagen */
 .cascada-gallery .gallery-item figcaption {
-  margin-top: .6rem; color: var(--suave);
-  font-size: .9rem; line-height: 1.45; text-align: left;
+  width: 100%;
+  margin-top: 12px;
+  text-align: center;
 }
+
+/* Tablet */
+@media (max-width: 900px) {
+  .project-gallery.cascada-gallery {
+    gap: 18px;
+  }
+
+  .cascada-gallery__mailing .ph img,
+  .cascada-gallery__spinciti .ph img {
+    width: 82%;
+    max-width: 300px;
+  }
+}
+
+/* Mobile */
 @media (max-width: 600px) {
-  .project-gallery.cascada-gallery { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; }
-  .cascada-gallery__mailing, .cascada-gallery__right,
-  .cascada-gallery__kambukka { grid-column: 1; grid-row: auto; }
-  .cascada-gallery__right { gap: 1.5rem; }
+  .project-gallery.cascada-gallery {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+  }
+
+  .cascada-gallery .gallery-item {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .cascada-gallery__mailing .ph img,
+  .cascada-gallery__spinciti .ph img {
+    width: 85%;
+    max-width: 320px;
+  }
+}
+
 }
