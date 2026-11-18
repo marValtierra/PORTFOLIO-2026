@@ -3,126 +3,116 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mariana Valtierra · Diseño y gestión cultural</title>
-  <meta name="description" content="Portafolio de Mariana Valtierra: diseño, comunicación y gestión de proyectos culturales en Ciudad de México.">
+  <meta name="description" content="Portafolio de Mariana Valtierra: diseño digital, email marketing, campañas y proyectos web.">
+  <title>Mariana Valtierra · Diseño digital y campañas</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <a class="skip" href="#trabajo">Ir al trabajo</a>
-
+  <a class="skip" href="#portafolio">Ir al portafolio</a>
   <header class="top">
     <a class="top-name" href="#inicio">Mariana Valtierra</a>
-    <nav aria-label="Principal">
-      <a href="#trabajo">Trabajo</a>
-      <a href="#resume">Resume</a>
+    <nav aria-label="Navegación principal">
+      <a href="#portafolio">Portafolio</a>
+      <a href="#resume">Perfil</a>
       <a href="#contacto">Contacto</a>
     </nav>
   </header>
-
   <main>
     <section id="inicio" class="hero">
-      <h1>Diseño y gestión de proyectos que conectan instituciones con comunidades.</h1>
-      <p class="lead">Soy licenciada en Arte y Diseño por la UNAM, con más de diez años trabajando en galerías de arte, marcas del giro wellness e instituciones públicas. Radico en la Ciudad de México.</p>
-      <div class="weave" role="presentation"></div>
+      <p class="eyebrow">DISEÑO DIGITAL · EMAIL MARKETING · CAMPAÑAS</p>
+      <h1>Diseño y estrategias digitales que conectan marcas, personas y comunidades.</h1>
+      <p class="lead">Diseñadora gráfica con experiencia en comunicación visual, campañas digitales y e-commerce. He diseñado mailings para marcas del sector wellness en Klaviyo, combinando su editor visual con HTML/CSS y enlaces UTM para seguimiento en Salesforce. Complementé mi experiencia en diseño con formación en desarrollo web y fundamentos de computación en la nube.</p>
+      <div class="weave" aria-hidden="true"></div>
     </section>
 
-    <section id="trabajo" class="work">
-      <h2>Trabajo seleccionado</h2>
-      <!-- Cada imagen: guarda el archivo en la carpeta img con el nombre indicado.
-           Mientras no exista, se muestra un bloque de color. -->
+    <section id="portafolio" class="work" aria-labelledby="work-title">
+      <h2 id="work-title">Trabajo seleccionado</h2>
+      <p class="section-note">Las imágenes son espacios reservados para tus piezas reales. Coloca los archivos en la carpeta <code>img/</code> usando los nombres indicados.</p>
 
       <article class="project project-wide">
         <div class="project-text">
           <h3>Grupo Cascada</h3>
-          <p class="role">Diseñadora In-house y Project manager  </p>
-          <p>Dos frentes de trabajo dentro del grupo: Diseñe contenidos digitales de 4 marcas dentro del grupo empresarial posicionándolos en el mercado Wellness en México alineados a la estrategia de Marketing dentro de ellos: e-mail marketing. Además del posicionamiento de Kambukka en las principales plataformas de e-commerce en México.</p>
+          <p class="role">Project Manager y Diseñadora In-House · Mar 2020 – Abr 2022</p>
+          <ul class="project-bullets">
+            <li>Diseñé campañas mensuales de email marketing para Technogym, Spinciti y Salt House mediante Klaviyo, HTML y CSS.</li>
+            <li>Desarrollé y adapté más de 30 plantillas HTML/CSS, combinando el editor visual de Klaviyo con modificaciones de código.</li>
+            <li>Implementé parámetros UTM para el seguimiento de campañas específicas en Salesforce.</li>
+            <li>Gestioné contenidos digitales para cuatro marcas y participé en campañas y estrategias de e-commerce, incluido el posicionamiento de Kambukka.</li>
+          </ul>
         </div>
-        <div class="pair">
-          <figure>
-            <div class="ph"><img src="img/mailing-TG.jpg" alt="Identidad visual de marcas de Grupo Cascada" onerror="this.remove()"></div>
-            <figcaption>Identidad de cuatro marcas del grupo, gestionadas al mismo tiempo, con un sistema visual coherente para cada una.</figcaption>
-          </figure>
-          <figure>
-            <div class="ph"><img src="img/cascada-kambukka.jpg" alt="Kambukka en plataformas de comercio electrónico" onerror="this.remove()"></div>
-            <figcaption>Dirección de Kambukka en México: presencia en las principales plataformas de e-commerce, alianzas con otras marcas y campañas digitales.</figcaption>
-          </figure>
+        <div class="project-gallery" aria-label="Galería de Grupo Cascada">
+          <figure class="gallery-item gallery-item-featured"><div class="ph"><img src="img/cascada-mailing-technogym.jpg" alt="Captura de mailing de Technogym diseñado para Grupo Cascada" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('missing')"></div><figcaption>Technogym · Mailing</figcaption></figure>
+          <figure class="gallery-item"><div class="ph"><img src="img/cascada-mailing-detalle.jpg" alt="Detalle visual de campaña de email marketing" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('missing')"></div><figcaption>Email marketing · Detalle</figcaption></figure>
+          <figure class="gallery-item"><div class="ph"><img src="img/cascada-kambukka.jpg" alt="Material digital de Kambukka para e-commerce" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('missing')"></div><figcaption>Kambukka · E-commerce</figcaption></figure>
         </div>
       </article>
 
       <article class="project">
-        <div class="ph"><img src="img/conapred.jpg" alt="Campaña del Conapred" onerror="this.remove()"></div>
         <div class="project-text">
-          <h3>Conapred</h3>
-          <p class="role">Comunicación social y diseño gráfico</p>
-          <p>Idea creativa y escaleta de la campaña 2025 “México es diversidad, inclusión y derechos”, dirigida a los 20 grupos históricamente discriminados, con seguimiento de métricas e informes.</p>
+          <h3>CONAPRED</h3>
+          <p class="role">Community Manager y Diseñadora Gráfica · Feb 2024 – Dic 2025</p>
+          <ul class="project-bullets">
+            <li>Desarrollé aproximadamente 16 campañas digitales e institucionales y participé en la coordinación de 2 campañas prioritarias del Consejo.</li>
+            <li>Diseñé contenidos para 20 grupos históricamente discriminados y coordiné materiales de comunicación con equipos internos.</li>
+            <li>Analicé indicadores de alcance e interacción mediante Excel y tablas dinámicas; elaboré reportes semanales, mensuales y anuales.</li>
+          </ul>
+        </div>
+        <div class="project-gallery" aria-label="Galería de CONAPRED">
+          <figure class="gallery-item gallery-item-featured"><div class="ph"><img src="img/conapred-campana.jpg" alt="Pieza gráfica de campaña institucional de CONAPRED" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('missing')"></div><figcaption>Campaña institucional</figcaption></figure>
+          <figure class="gallery-item"><div class="ph"><img src="img/conapred-digital.jpg" alt="Material de comunicación digital de CONAPRED" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('missing')"></div><figcaption>Comunicación digital</figcaption></figure>
+          <figure class="gallery-item"><div class="ph"><img src="img/conapred-contenidos.jpg" alt="Selección de contenidos gráficos de CONAPRED" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('missing')"></div><figcaption>Contenidos gráficos</figcaption></figure>
         </div>
       </article>
 
       <article class="project">
-        <div class="ph"><img src="img/marso.jpg" alt="Exposición en Fundación Marso" onerror="this.remove()"></div>
+        <div class="project-text">
+          <h3>Diseño freelance</h3>
+          <p class="role">Proyectos de diseño y comunicación · Jul 2022 – Actualidad</p>
+          <ul class="project-bullets">
+            <li>Diseño identidades visuales, artes y materiales editoriales para clientes de distintos sectores.</li>
+            <li>Desarrollé sitios web en WordPress, tiendas en línea en Shopify y recientemente desarrollo marcas bajo los principios del Product Management.</li>
+          </ul>
+        </div>
+        <div class="project-gallery" aria-label="Galería de proyectos freelance">
+          <figure class="gallery-item gallery-item-featured"><div class="ph"><img src="img/freelance-branding.jpg" alt="Proyecto de identidad visual freelance" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('missing')"></div><figcaption>Identidad visual</figcaption></figure>
+          <figure class="gallery-item"><div class="ph"><img src="img/freelance-web.jpg" alt="Diseño de sitio web freelance" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('missing')"></div><figcaption>Diseño web</figcaption></figure>
+          <figure class="gallery-item"><div class="ph"><img src="img/freelance-ecommerce.jpg" alt="Proyecto de tienda en línea freelance" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('missing')"></div><figcaption>E-commerce</figcaption></figure>
+        </div>
+      </article>
+
+      <article class="project project-secondary">
         <div class="project-text">
           <h3>Fundación Marso</h3>
-          <p class="role">Asistencia general, producción y mediación</p>
-          <p>Control de obra e inventarios, enlace entre artistas, curadores y equipo, atención a público y materiales de difusión para exposiciones de arte contemporáneo.</p>
+          <p class="role">Asistencia general, producción y mediación · 2025–2026</p>
+          <p>Control de obra e inventarios, enlace entre artistas, curadores y equipo, atención a públicos y elaboración de materiales de difusión para exposiciones de arte contemporáneo.</p>
         </div>
-      </article>
-
-      <article class="project">
-        <div class="ph"><img src="img/redes.jpg" alt="Plan de contenidos para redes sociales" onerror="this.remove()"></div>
-        <div class="project-text">
-          <h3>Redes sociales</h3>
-          <p class="role">Community management y plan de contenidos</p>
-          <p>Parrilla anual para Cromatopías, un proyecto escénico: publicaciones, historias, videoensayos, un live y visitas a funciones para levantar material en sala, en Instagram, Facebook y TikTok.</p>
+        <div class="project-gallery" aria-label="Galería de Fundación Marso">
+          <figure class="gallery-item gallery-item-featured"><div class="ph"><img src="img/marso-exposicion.jpg" alt="Registro de exposición en Fundación Marso" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('missing')"></div><figcaption>Exposición</figcaption></figure>
+          <figure class="gallery-item"><div class="ph"><img src="img/marso-difusion.jpg" alt="Material de difusión de Fundación Marso" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('missing')"></div><figcaption>Difusión</figcaption></figure>
         </div>
       </article>
     </section>
 
-    <section id="resume" class="resume">
-      <h2>Resume</h2>
-      <div class="resume-intro">
-        <p>Mi trabajo parte del diseño, pero se ha movido hacia la coordinación: planear, dar seguimiento, ordenar información y lograr que artistas, equipos e instituciones hablen el mismo idioma.</p>
-        <p>Me interesan el trabajo comunitario, la migración y las fibras naturales de México, como el henequén, el ixtle y la lechuguilla. Hablo español, inglés y francés, y estoy aprendiendo hñähñu.</p>
-      </div>
-
-      <h3 class="sub">Experiencia</h3>
-      <ul class="exp">
-        <li><strong>Asistente general, Fundación Marso</strong><span>2025 a 2026</span></li>
-        <li><strong>Community manager y diseñadora gráfica, Conapred</strong><span>2024 a 2025</span></li>
-        <li><strong>Diseñadora de proyectos creativos y culturales, freelance</strong><span>2022 a hoy</span></li>
-        <li><strong>Project manager y diseñadora in-house, Grupo Cascada</strong><span>2020 a 2022</span></li>
-      </ul>
-
-      <h3 class="sub">Estudios recientes</h3>
+    <section id="resume" class="resume" aria-labelledby="resume-title">
+      <h2 id="resume-title">Perfil y formación</h2>
+      <p>Soy licenciada en Arte y Diseño por la UNAM. Mi trabajo combina diseño visual, comunicación de campañas y desarrollo de proyectos digitales. Me interesa seguir profundizando en diseño de emails y plantillas HTML/CSS.</p>
+      <h3 class="sub">Formación reciente</h3>
       <div class="studies">
-        <article class="study">
-          <div class="ph"><img src="img/estudio-web.jpg" alt="Curso de desarrollo web y cloud computing" onerror="this.remove()"></div>
-          <h4>Desarrollo web y cloud computing</h4>
-          <p>Junior Achievement, desde agosto de 2024. Fundamentos de programación y desarrollo de páginas con HTML, CSS, JavaScript y Python, y preparación para la certificación AWS Cloud Practitioner.</p>
-        </article>
-        <article class="study">
-          <div class="ph"><img src="img/estudio-conapred.jpg" alt="Taller del Conapred sobre igualdad y no discriminación" onerror="this.remove()"></div>
-          <h4>El ABC de la igualdad y no discriminación</h4>
-          <p>Taller del Conapred, marzo y abril de 2024. Derechos humanos, diversidad e igualdad desde un enfoque histórico y de políticas públicas.</p>
-        </article>
+        <article class="study"><h4>Desarrollo web y Cloud Computing</h4><p>Programa Mujer Digital · Junior Achievement Américas · 2025 · 290 horas. Formación en desarrollo web (IBM SkillsBuild), HTML, CSS, GitHub y fundamentos de AWS Cloud Practitioner Essentials.</p></article>
+        <article class="study"><h4>Product Management</h4><p>Coderhouse · En curso (2026). Product Discovery, definición de MVP, métricas de producto y experiencia de usuario.</p></article>
       </div>
-
-      <h3 class="sub">Formación y herramientas</h3>
-      <p class="tools">Licenciatura en Arte y Diseño, Facultad de Artes y Diseño de la UNAM. Photoshop, Illustrator, InDesign, WordPress, Excel y Google Workspace.</p>
+      <h3 class="sub">Herramientas</h3>
+      <p class="tools">Klaviyo · Diseño de mailings · HTML/CSS · Parámetros UTM · Salesforce (seguimiento de campañas) · E-commerce · Shopify · WordPress · Adobe Photoshop · Adobe Illustrator · Adobe InDesign · Excel y tablas dinámicas · GitHub · Fundamentos de AWS.</p>
     </section>
-
     <section id="contacto" class="contact">
       <h2>Contacto</h2>
-      <p>¿Tienes un proyecto cultural, una marca o una convocatoria? Escríbeme.</p>
+      <p>¿Tienes un proyecto de diseño digital, email marketing o comunicación?</p>
       <a class="mail" href="mailto:lamarvaltierra@gmail.com">lamarvaltierra@gmail.com</a>
     </section>
   </main>
-
-  <footer class="foot">
-    <div class="weave weave-thin" role="presentation"></div>
-    <p>© 2026 Mariana Valtierra</p>
-  </footer>
+  <footer class="foot"><div class="weave weave-thin" aria-hidden="true"></div><p>© 2026 Mariana Valtierra</p></footer>
 </body>
 </html>
