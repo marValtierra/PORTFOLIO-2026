@@ -22,6 +22,7 @@
   --s-5: 5rem;
   --s-section: clamp(4rem, 9vw, 6.5rem);
   --gap-gal: clamp(1rem, 2.2vw, 1.5rem);
+  --proj-gap: clamp(2.5rem, 6vw, 4rem);
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -61,8 +62,7 @@ h1, h2, h3, h4 { font-family: var(--display); font-weight: 800; line-height: 1.1
 .work h2, .resume h2, .contact h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom: var(--s-3); }
 
 /* ===== Proyectos ===== */
-.project { margin-bottom: var(--s-5); }
-.project:last-child { margin-bottom: 0; }
+.project + .project { margin-top: var(--proj-gap); padding-top: var(--proj-gap); border-top: 1px solid var(--borde); }
 .project-text { max-width: 46rem; }
 .project-text h3 { font-size: 1.7rem; border-left: 0.5rem solid var(--lila); padding-left: var(--s-1); }
 .role { margin: var(--s-1) 0; color: var(--suave); }
@@ -74,34 +74,23 @@ h1, h2, h3, h4 { font-family: var(--display); font-weight: 800; line-height: 1.1
 /* Galerías: las fotos conservan su proporción, sin recortar ni estirar */
 .project-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--gap-gal); align-items: start; margin-top: var(--s-3); }
 .gallery-item { margin: 0; min-width: 0; }
-.ph { width: 100%; overflow: hidden; background: var(--panel); }
+.ph { width: 100%; }
 .ph img { display: block; width: 100%; height: auto; }
 .gallery-item figcaption { margin-top: 0.6rem; color: var(--suave); font-size: 0.9rem; line-height: 1.45; }
 
-/* ===== Grupo Cascada: mosaico según wireframe =====
-   Áreas:   tall  top        1 = alta, izquierda
-            tall  small      2 = arriba derecha, 3 = abajo derecha
-            wide  wide       4 = ancho completo
-   Para intercambiar fotos, cambia el grid-area de las 4 líneas de abajo. */
-.cascada-gallery {
-  grid-template-columns: 1.5fr 1fr;
-  grid-template-rows: 26rem 13rem 11rem;
-  grid-template-areas: "tall top" "tall small" "wide wide";
-  align-items: stretch;
-  width: min(100%, 38rem);
-}
-.cascada-gallery__mailing  { grid-area: tall; }
-.cascada-gallery__hero     { grid-area: top; }
-.cascada-gallery__spinciti { grid-area: small; }
-.cascada-gallery__kambukka { grid-area: wide; }
+/* ===== Grupo Cascada: mosaico con tus parámetros originales ===== */
+.cascada-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(14px, 2vw, 22px); align-items: start; width: 100%; }
+.cascada-gallery .gallery-item { margin: 0; min-width: 0; }
+.cascada-gallery .ph { display: flex; justify-content: center; align-items: flex-start; background: transparent; overflow: visible; }
+.cascada-gallery .ph img { width: 100%; max-width: 100%; height: auto; object-fit: contain; }
+.cascada-gallery__mailing .ph img,
+.cascada-gallery__spinciti .ph img { width: 76%; max-width: 270px; }
+.cascada-gallery .gallery-item figcaption { margin-top: 9px; text-align: center; font-size: 0.8rem; }
 
-.cascada-gallery .gallery-item { display: flex; flex-direction: column; min-height: 0; }
-.cascada-gallery .ph { position: relative; flex: 1; min-height: 0; }
-/* La imagen nunca se agranda más de su tamaño real (evita pixelado) ni se recorta */
-.cascada-gallery .ph img { position: absolute; inset: 0; margin: auto; width: auto; height: auto; max-width: 100%; max-height: 100%; object-fit: contain; }
-
-@media (max-width: 34rem) {
-  .cascada-gallery { grid-template-columns: 1fr; grid-template-rows: 34rem 24rem 16rem 12rem; grid-template-areas: "tall" "top" "small" "wide"; }
+@media (max-width: 600px) {
+  .cascada-gallery { grid-template-columns: minmax(0, 1fr); gap: 22px; }
+  .cascada-gallery__mailing .ph img,
+  .cascada-gallery__spinciti .ph img { max-width: 300px; }
 }
 
 /* ===== Perfil y trayectoria ===== */
