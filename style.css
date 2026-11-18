@@ -61,7 +61,7 @@ h1, h2, h3, h4 { font-family: var(--display); font-weight: 800; line-height: 1.1
   position: relative; aspect-ratio: 4 / 3; overflow: hidden;
   background: repeating-linear-gradient(0deg, rgba(255,255,255,0.1) 0 2px, transparent 2px 7px), var(--violeta);
 }
-.ph img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+.ph img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; display: block; }
 
 /* ===== Proyectos ===== */
 .project { display: grid; grid-template-columns: 1fr; gap: 1.5rem; align-items: center; margin-bottom: 4.5rem; }
