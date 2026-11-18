@@ -356,4 +356,129 @@ h1, h2, h3, h4 { font-family: var(--display); font-weight: 800; line-height: 1.1
     width: 85%;
     max-width: 320px;
   }
+
+  
+/* ========================================
+   GRUPO CASCADA · MOSAICO EDITORIAL
+   ======================================== */
+
+.project-gallery.cascada-gallery {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  grid-template-areas:
+    "mailing spinciti"
+    "mailing ux"
+    "kambukka kambukka";
+  gap: 24px 28px;
+  align-items: start;
+  margin-top: 1.5rem;
+}
+
+/* Ubicación de cada pieza */
+.cascada-gallery__mailing {
+  grid-area: mailing;
+}
+
+.cascada-gallery__spinciti {
+  grid-area: spinciti;
+}
+
+.cascada-gallery__hero {
+  grid-area: ux;
+}
+
+.cascada-gallery__kambukka {
+  grid-area: kambukka;
+}
+
+/* Contenedores */
+.cascada-gallery .gallery-item {
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  grid-column: auto;
+  grid-row: auto;
+}
+
+.cascada-gallery .ph,
+.cascada-gallery .gallery-item .ph {
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  max-height: none;
+  aspect-ratio: auto;
+  overflow: visible;
+  background: transparent;
+  border: 0;
+}
+
+/* Imágenes sin deformación ni recortes */
+.cascada-gallery .ph img {
+  display: block;
+  position: static;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+  transform: none;
+}
+
+/* Mailing principal: tamaño controlado */
+.cascada-gallery__mailing .ph img {
+  width: 100%;
+  max-width: 430px;
+}
+
+/* Mailing secundario */
+.cascada-gallery__spinciti .ph img {
+  width: 100%;
+  max-width: 320px;
+}
+
+/* Technogym UX */
+.cascada-gallery__hero .ph img {
+  width: 100%;
+}
+
+/* Kambukka horizontal */
+.cascada-gallery__kambukka .ph img {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Captions */
+.cascada-gallery .gallery-item figcaption {
+  margin-top: 10px;
+  color: var(--suave);
+  font-size: .9rem;
+  line-height: 1.45;
+}
+
+/* ========================================
+   MOBILE
+   ======================================== */
+
+@media (max-width: 600px) {
+  .project-gallery.cascada-gallery {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "mailing"
+      "spinciti"
+      "ux"
+      "kambukka";
+    gap: 28px;
+  }
+
+  .cascada-gallery__mailing .ph img {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .cascada-gallery__spinciti .ph img {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
 }
