@@ -1,148 +1,344 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta content="Portafolio de Mariana Valtierra: diseño digital, email marketing, campañas y proyectos web." name="description"/>
-<title>Mariana Valtierra · Diseño digital y campañas</title>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
-<link href="style.css" rel="stylesheet"/>
-</head>
-<body>
-<a class="skip" href="#portafolio">Ir al portafolio</a>
-<header class="top">
-<a class="top-name" href="#inicio">Mariana Valtierra</a>
-<nav aria-label="Navegación principal">
-<a href="#portafolio">Portafolio</a>
-<a href="#resume">CV</a>
-<a href="#contacto">Contacto</a>
-</nav>
-</header>
-<main>
-<section class="hero" id="inicio">
-<h1>Diseño y estrategias digitales que conectan marcas, personas y comunidades.</h1>
-<p class="lead">Diseñadora gráfica con experiencia en comunicación visual, campañas digitales y e-commerce. He diseñado mailings para marcas del sector wellness en Klaviyo, combinando su editor visual con HTML/CSS y enlaces UTM para seguimiento en Salesforce. En los últimos años, mi interés por la tecnología me ha llevado a ampliar mi formación hacia el desarrollo web, AWS Cloud Computing y Product Management, buscando conectar mi experiencia en diseño con nuevas herramientas y soluciones digitales.</p>
-<div aria-hidden="true" class="weave"></div>
-</section>
-<section aria-labelledby="work-title" class="work" id="portafolio">
-<h2 id="work-title">Trabajo seleccionado</h2>
-<article class="project project-wide">
-<div class="project-text">
-<h3>Grupo Cascada</h3>
-<p class="role">Project Manager y Diseñadora In-House · Mar 2020 – Abr 2022</p>
-<ul class="project-bullets">
-<li>Diseñé campañas mensuales de email marketing para Technogym, Spinciti y Salt House mediante Klaviyo, HTML y CSS.</li>
-<li>Desarrollé y adapté más de 30 plantillas HTML/CSS, combinando el editor visual de Klaviyo con modificaciones de código.</li>
-<li>Implementé parámetros UTM para el seguimiento de campañas específicas en Salesforce.</li>
-<li>Gestioné contenidos digitales para cuatro marcas y participé en campañas y estrategias de e-commerce, incluido el posicionamiento de Kambukka.</li>
-</ul>
-</div>
+/* ===== Variables originales: colores y tipografías preservados ===== */
 
-<div aria-label="Galería de Grupo Cascada"
-     class="project-gallery cascada-gallery">
+:root {
 
-  <!-- 01: Mailing Technogym -->
-  <figure class="gallery-item cascada-gallery__mailing">
-    <div class="ph">
-      <img src="img/mailing-TG.jpg"
-           alt="Email marketing de Technogym"
-           loading="lazy"
-           decoding="async">
-    </div>
-    <figcaption>Technogym · Email marketing</figcaption>
-  </figure>
+  --fondo: #17102a;
 
-  <!-- 02: Mailing Spinciti -->
-  <figure class="gallery-item cascada-gallery__spinciti">
-    <div class="ph">
-      <img src="img/Spinciti1.jpg"
-           alt="Email marketing de Spinciti"
-           loading="lazy"
-           decoding="async">
-    </div>
-    <figcaption>Spinciti · Email marketing</figcaption>
-  </figure>
+  --panel: #231a3f;
 
-  <!-- 03: Campaña digital Technogym -->
-  <figure class="gallery-item cascada-gallery__hero">
-    <div class="ph">
-      <img src="img/uxTG.png"
-           alt="Campaña digital Technogym"
-           loading="lazy"
-           decoding="async">
-    </div>
-    <figcaption>Technogym · Campaña digital</figcaption>
-  </figure>
+  --violeta: #6b52d1;
 
-  <!-- 04: Kambukka -->
-  <figure class="gallery-item cascada-gallery__kambukka">
-    <div class="ph">
-      <img src="img/kambukka01.jpg"
-           alt="Posicionamiento de marca Kambukka"
-           loading="lazy"
-           decoding="async">
-    </div>
-    <figcaption>Kambukka · Posicionamiento de marca</figcaption>
-  </figure>
+  --lila: #a592ee;
 
-</div>
+  --texto: #ece8f8;
 
-</article><article class="project">
-<div class="project-text">
-<h3>Diseño freelance</h3>
-<p class="role">Proyectos de diseño y comunicación · Jul 2022 – Actualidad</p>
-<ul class="project-bullets">
-<li>Desarrollé sitios web en WordPress, tiendas en línea en Shopify y recientemente desarrollo marcas bajo los principios del Product Management.</li>
-<li>Diseño identidades visuales, artes y materiales editoriales para clientes de distintos sectores.</li>
-</ul>
-</div>
-<div aria-label="Galería de proyectos freelance" class="project-gallery"><figure class="gallery-item"><div class="ph"><img alt="Página principal del sitio Perla Valtierra" loading="lazy" src="img/perlav-shop2.png"/></div><figcaption>Perla Valtierra · Sitio web</figcaption></figure><figure class="gallery-item"><div class="ph"><img alt="Página de producto de Perla Valtierra" loading="lazy" src="img/perlav-shop.png"/></div><figcaption>Perla Valtierra · Producto</figcaption></figure><figure class="gallery-item"><div class="ph"><img alt="Catálogo de productos de Perla Valtierra" loading="lazy" src="img/perlav-shop1.png"/></div><figcaption>Perla Valtierra · Catálogo</figcaption></figure><figure class="gallery-item"><div class="ph"><img alt="Página de Hits Futuros" loading="lazy" src="img/hf02.png"/></div><figcaption>Hits Futuros · Diseño web</figcaption></figure>
-<figure class="gallery-item"><div class="ph"><img alt="Inicio ecommerce de El Mandado, prototipo en Figma" loading="lazy" src="img/elmandado01.png"/></div><figcaption>El Mandado · Product Design</figcaption></figure>
-<figure class="gallery-item"><div class="ph"><img alt="Carrito y checkout ecommerce de El Mandado, prototipo en Figma" loading="lazy" src="img/elmandado02.png"/></div><figcaption>El Mandado · Product Design Checkout</figcaption></figure></div>
-</article><article class="project">
-<div class="project-text">
-<h3>CONAPRED</h3>
-<p class="role">Community Manager y Diseñadora Gráfica · Feb 2024 – Dic 2025</p>
-<ul class="project-bullets">
-<li>Desarrollé aproximadamente 16 campañas digitales e institucionales y participé en la coordinación de 2 campañas prioritarias del Consejo.</li>
-<li>Diseñé contenidos para 20 grupos históricamente discriminados y coordiné materiales de comunicación con equipos internos.</li>
-<li>Analicé indicadores de alcance e interacción mediante Excel y tablas dinámicas; elaboré reportes semanales, mensuales y anuales.</li>
-</ul>
-</div>
-<div aria-label="Galería de CONAPRED" class="project-gallery"><figure class="gallery-item"><div class="ph"><img alt="Campaña institucional CONAPRED" loading="lazy" src="img/conapredmain.jpg"/></div><figcaption>CONAPRED · Campaña institucional</figcaption></figure><figure class="gallery-item"><div class="ph"><img alt="Pieza de comunicación digital CONAPRED" loading="lazy" src="img/conapred1.png"/></div><figcaption>CONAPRED · Banners </figcaption></figure><figure class="gallery-item"><div class="ph"><img alt="Pieza gráfica de CONAPRED" loading="lazy" src="img/conaprefFB.jpg"/></div><figcaption>CONAPRED · Contenidos gráficos</figcaption></figure></div>
-</article><article class="project project-secondary">
-<div class="project-text">
-<h3>Fundación Marso</h3>
-<p class="role">Asistencia general, producción y mediación · 2025–2026</p>
-<p>Diseño y adaptación de materiales gráficos para la difusión de exposiciones de arte contemporáneo. Colaboración con equipos creativos en la producción de contenidos visuales y coordinación de materiales de comunicación para distintos públicos.</p>
-</div>
-<div aria-label="Galería de Fundación Marso" class="project-gallery"><figure class="gallery-item"><div class="ph"><img alt="Cartel de difusión Fundación Marso" loading="lazy" src="img/fmarso.jpg"/></div><figcaption>Fundación Marso · Diseño de Cartel</figcaption></figure><figure class="gallery-item"><div class="ph"><img alt="Cartel Nierika La piel de Wirikuta" loading="lazy" src="img/wirikuta.png"/></div><figcaption>Fundación Marso · Diseño</figcaption></figure></div>
-</article></section>
-<section aria-labelledby="resume-title" class="resume" id="resume"><h2 id="resume-title">Perfil y trayectoria</h2>
-<p class="profile-kicker">DISEÑADORA DIGITAL · EMAIL MARKETING · DIGITAL CAMPAIGNS</p>
-<p class="profile-location">Ciudad de México · <a href="tel:+525630352395">(+52) 56 3035 2395</a> · <a href="mailto:lamarvaltierra@gmail.com">lamarvaltierra@gmail.com</a></p>
-<div class="resume-intro"><h3 class="sub">Perfil</h3><p>Diseñadora gráfica con experiencia en comunicación visual, campañas digitales y e-commerce. He diseñado mailings para marcas de la industria wellness en Klaviyo, combinando su editor visual con HTML/CSS y enlaces UTM para seguimiento en Salesforce. Complementé mi experiencia en diseño con formación en desarrollo web y fundamentos de computación en la nube.</p></div>
-<h3 class="sub">Experiencia profesional</h3>
-<div class="career-list">
-<article class="career-entry"><div class="career-head"><h4>Grupo Cascada</h4><span>Mar 2020 – Abr 2022</span></div><p class="career-role">Project Manager y Diseñadora In-House</p><ul class="career-bullets"><li>Diseñé campañas mensuales de email marketing para Technogym, Spinciti y Salt House mediante Klaviyo, HTML y CSS.</li><li>Desarrollé y adapté más de 30 plantillas HTML/CSS, combinando el editor visual de Klaviyo con modificaciones de código.</li><li>Implementé parámetros UTM para el seguimiento de campañas específicas en Salesforce.</li><li>Gestioné contenidos digitales para cuatro marcas y participé en campañas y estrategias de e-commerce, incluido el posicionamiento de Kambukka.</li></ul></article>
-<article class="career-entry"><div class="career-head"><h4>CONAPRED</h4><span>Feb 2024 – Dic 2025</span></div><p class="career-role">Community Manager y Diseñadora Gráfica</p><ul class="career-bullets"><li>Desarrollé aproximadamente 16 campañas digitales e institucionales y participé en la coordinación de 2 campañas prioritarias del Consejo.</li><li>Diseñé contenidos para 20 grupos históricamente discriminados y coordiné materiales de comunicación con equipos internos.</li><li>Analicé indicadores de alcance e interacción mediante Excel y tablas dinámicas; elaboré reportes semanales, mensuales y anuales.</li></ul></article>
-<article class="career-entry"><div class="career-head"><h4>Diseñadora freelance</h4><span>Jul 2022 – Actualidad</span></div><p class="career-role">Proyectos de diseño y comunicación</p><ul class="career-bullets"><li>Diseño identidades visuales, artes y materiales editoriales para clientes de distintos sectores.</li><li>Desarrollé sitios web en WordPress, tiendas en línea en Shopify y recientemente desarrollo marcas bajo los principios del Product Management.</li></ul></article>
-</div>
-<h3 class="sub">Educación</h3><div class="studies">
-<article class="study"><h4>Programa Mujer Digital</h4><p>Junior Achievement Américas · Mar 2025</p><p>290 horas: Desarrollo Web (IBM SkillsBuild), AWS Cloud Practitioner Essentials e introducción a la programación. Formación práctica en HTML, CSS y GitHub.</p></article>
-<article class="study"><h4>Product Management</h4><p>Coderhouse · En curso (2026)</p></article>
-<article class="study"><h4>Licenciatura en Arte y Diseño</h4><p>UNAM, Facultad de Artes y Diseño · Titulada en 2019</p></article></div>
-<h3 class="sub">Herramientas y competencias</h3><p class="tools tools-wide">Email marketing · Diseño de mailings · Klaviyo · Plantillas HTML/CSS · Diseño digital · Campañas comerciales · Parámetros UTM · Salesforce (seguimiento de campañas y ventas) · E-commerce · Shopify · Web · AWS Cloud Practitioner · Adobe Photoshop · Adobe Illustrator · Adobe InDesign · WordPress · Excel y tablas dinámicas · GitHub · Google Workspace</p>
-<h3 class="sub">Experiencia adicional</h3><div class="career-list"><article class="career-entry"><div class="career-head"><h4>Fundación Marso</h4><span>Ene 2025 – Ago 2026</span></div><p class="career-role">Asistente General</p><p>Diseño de materiales de difusión y coordinación de contenidos para proyectos expositivos.</p></article><article class="career-entry"><div class="career-head"><h4>Galería Lourdes Sosa · Four Seasons, CDMX</h4><span>Nov 2018 – Nov 2019</span></div><p class="career-role">Asesora de inversiones de arte moderno y contemporáneo</p></article></div>
-<h3 class="sub">Idiomas</h3><p>Español nativo · Inglés C1 · Francés B1 · HñäHñu básico</p></section>
-<section class="contact" id="contacto">
-<h2>Contacto</h2>
-<p>¿Tienes un proyecto de diseño digital, email marketing o comunicación?</p><p>¡Escríbeme!</p>
-<a class="mail" href="mailto:lamarvaltierra@gmail.com">lamarvaltierra@gmail.com</a>
-<div class="contact-actions"><a aria-label="LinkedIn (enlace pendiente de personalizar)" class="linkedin-button" href="https://www.linkedin.com/in/mariana-valtierra-0253abb0/" rel="noopener noreferrer" target="_blank">LinkedIn ↗</a></div></section>
-</main>
-<footer class="foot"><div aria-hidden="true" class="weave weave-thin"></div><p>© 2026 Mariana Valtierra</p></footer>
-</body>
-</html>
+  --suave: #b4abd0;
+
+  --hilo-lima: #c6f24e;
+
+  --display: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+
+  --cuerpo: "Inter", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+
+}
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; color-scheme: dark; }
+
+body { margin: 0; background: var(--fondo); color: var(--texto); font-family: var(--cuerpo); font-size: 1.0625rem; line-height: 1.65; }
+
+a { color: var(--lila); text-underline-offset: .18em; }
+
+a:hover { color: #fff; }
+
+:focus-visible { outline: 3px solid var(--hilo-lima); outline-offset: 3px; }
+
+.skip { position: absolute; left: 1rem; top: -4rem; background: #fff; color: var(--fondo); padding: .6rem 1rem; z-index: 10; }
+
+.skip:focus { top: 1rem; }
+
+h1, h2, h3, h4 { font-family: var(--display); font-weight: 800; line-height: 1.1; margin: 0; }
+
+/* ===== Encabezado original ===== */
+
+.top { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap; max-width: 68rem; margin: 0 auto; padding: 1.5rem 1.5rem 0; }
+
+.top-name { font-family: var(--display); font-weight: 800; font-size: 1.1rem; color: var(--texto); text-decoration: none; }
+
+.top nav { display: flex; gap: 1.5rem; }
+
+.top nav a { color: var(--suave); text-decoration: none; }
+
+.top nav a:hover { color: #fff; text-decoration: underline; }
+
+/* ===== Inicio original ===== */
+
+.hero { max-width: 68rem; margin: 0 auto; padding: 5rem 1.5rem 0; }
+
+.hero h1 { font-size: clamp(2.4rem, 7vw, 5.2rem); letter-spacing: -.025em; max-width: 16ch; }
+
+.lead { max-width: 38rem; margin: 1.75rem 0 3rem; color: var(--suave); font-size: 1.2rem; }
+
+.weave { position: relative; height: 7rem; transform-origin: left; animation: tejer 1.4s ease-out both; background: repeating-linear-gradient(90deg, #3a2a7a 0 1.6rem, #5a41b8 1.6rem 3.2rem, #2a1d52 3.2rem 4.8rem, #8f78ea 4.8rem 6.4rem, var(--hilo-lima) 6.4rem 6.8rem); }
+
+.weave::after { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(0deg, rgba(255,255,255,.18) 0 2px, transparent 2px 6px); }
+
+.weave-thin { height: 1.2rem; animation: none; }
+
+@keyframes tejer { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+
+/* ===== Secciones originales ===== */
+
+.work, .resume, .contact { max-width: 68rem; margin: 0 auto; padding: 6rem 1.5rem 0; }
+
+.work h2, .resume h2, .contact h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom: 2.5rem; }
+
+.ph { position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: repeating-linear-gradient(0deg, rgba(255,255,255,.1) 0 2px, transparent 2px 7px), var(--violeta); }
+
+.ph img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; display: block; }
+
+/* ===== Proyectos originales ===== */
+
+.project { display: grid; grid-template-columns: 1fr; gap: 1.5rem; align-items: center; margin-bottom: 4.5rem; }
+
+.project-text h3 { font-size: 1.7rem; border-left: .5rem solid var(--lila); padding-left: .9rem; }
+
+.role { margin: .75rem 0; color: var(--suave); }
+
+.project-text p:last-child { margin: 0; max-width: 34rem; }
+
+.project-wide { align-items: start; }
+
+.pair { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+
+.pair figure { margin: 0; }
+
+.pair figcaption { margin-top: .9rem; max-width: 30rem; color: var(--suave); }
+
+/* ===== Resume original ===== */
+
+.resume-intro { max-width: 40rem; }
+
+.resume-intro p { margin: 0 0 1.1rem; }
+
+.sub { font-size: 1.35rem; margin: 3rem 0 1.25rem; }
+
+.exp { list-style: none; margin: 0; padding: 0; max-width: 44rem; }
+
+.exp li { display: flex; justify-content: space-between; gap: 1.5rem; padding: .85rem 0; border-top: 1px solid rgba(255,255,255,.14); }
+
+.exp li:last-child { border-bottom: 1px solid rgba(255,255,255,.14); }
+
+.exp span { color: var(--suave); white-space: nowrap; }
+
+.studies { display: grid; grid-template-columns: 1fr; gap: 2.5rem; }
+
+.study h4 { font-size: 1.3rem; margin: 1rem 0 .5rem; }
+
+.study p { margin: 0; color: var(--suave); max-width: 30rem; }
+
+.tools { max-width: 40rem; margin: 0; }
+
+/* ===== Contacto original ===== */
+
+.contact p { max-width: 34rem; margin: 0 0 1rem; }
+
+.mail { font-family: var(--display); font-weight: 800; font-size: clamp(1.4rem, 4.5vw, 2.4rem); color: var(--lila); overflow-wrap: anywhere; }
+
+.mail:hover { color: #fff; }
+
+/* ===== Pie original ===== */
+
+.foot { margin-top: 7rem; }
+
+.foot p { max-width: 68rem; margin: 0 auto; padding: 1.25rem 1.5rem 2rem; color: var(--suave); font-size: .95rem; }
+
+/* ===== Adiciones mínimas: bullets y galería, sin cambiar paleta ===== */
+
+.eyebrow { color: var(--lila); font-size: .85rem; letter-spacing: .08em; font-weight: 600; margin: 0 0 1rem; }
+
+.section-note { color: var(--suave); max-width: 38rem; margin: -1rem 0 2.5rem; font-size: .9rem; }
+
+.project-bullets { margin: 1rem 0 1.5rem; padding-left: 1.4rem; max-width: 43rem; }
+
+.project-bullets li { margin: 0 0 .65rem; padding-left: .15rem; }
+
+.project-bullets li::marker { color: var(--lila); }
+
+.project-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; align-items: start; }
+
+.gallery-item { margin: 0; min-width: 0; }
+
+.gallery-item-featured { grid-row: span 2; }
+
+.gallery-item-featured .ph { aspect-ratio: auto; min-height: 25rem; height: 100%; }
+
+.gallery-item:not(.gallery-item-featured) .ph { aspect-ratio: 4 / 3; }
+
+.gallery-item figcaption { margin-top: .65rem; color: var(--suave); font-size: .9rem; }
+
+.ph.missing::after { content: "Imagen pendiente"; position: absolute; inset: 0; display: grid; place-items: center; color: var(--texto); font-size: .85rem; }
+
+.project-secondary { opacity: .95; }
+
+/* ===== Pantallas grandes originales, adaptadas a galerías ===== */
+
+@media (min-width: 52rem) {
+
+  .hero { padding-top: 7rem; }
+
+  .project { grid-template-columns: 1.1fr 1fr; gap: 3rem; }
+
+  .project-wide { grid-template-columns: 1fr; gap: 2rem; }
+
+  .pair { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+
+  .studies { grid-template-columns: 1fr 1fr; gap: 3rem; }
+
+}
+
+@media (max-width: 51.99rem) {
+
+  .project-gallery { margin-top: .25rem; }
+
+  .gallery-item-featured .ph { min-height: 18rem; }
+
+}
+
+@media (max-width: 34rem) {
+
+  .top nav { flex-wrap: wrap; gap: .8rem 1.2rem; }
+
+  .project-gallery { gap: .7rem; }
+
+  .gallery-item-featured { grid-column: 1 / -1; grid-row: auto; }
+
+  .gallery-item-featured .ph { min-height: 15rem; aspect-ratio: 4 / 3; }
+
+  .gallery-item figcaption { font-size: .8rem; }
+
+}
+
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .weave { animation: none; } }
+
+
+
+/* ===== Revisión de galerías: sin alterar los colores originales ===== */
+
+.ph { position: relative; width: 100%; height: auto; aspect-ratio: auto; overflow: hidden; background: transparent; border: 0; min-height: 0; }
+
+.ph img { position: static; display: block; width: 100%; height: auto; object-fit: contain; }
+
+.project-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; align-items: start; margin-top: 1.5rem; }
+
+.gallery-item, .gallery-item-featured { grid-row: auto; grid-column: auto; margin: 0; min-width: 0; }
+
+.gallery-item-featured .ph, .gallery-item:not(.gallery-item-featured) .ph { aspect-ratio: auto; min-height: 0; height: auto; }
+
+.gallery-item figcaption { margin-top: .65rem; color: var(--suave); font-size: .9rem; line-height: 1.45; }
+
+/* El mailing conserva su ancho y se puede recorrer sin deformarlo */
+
+.gallery-item--email .ph { max-height: 34rem; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: var(--violeta) transparent; }
+
+.ph.missing { min-height: 12rem; background: var(--panel); }
+
+@media (min-width: 52rem) { .project:has(.project-gallery) { grid-template-columns: minmax(0,1fr); align-items: start; } }
+
+@media (max-width: 40rem) { .project-gallery { grid-template-columns: 1fr; } .gallery-item--email .ph { max-height: 28rem; } }
+
+
+
+/* Imagen Technogym pendiente: estado discreto, sin marco violeta */
+
+.ph:has(img[src="img/mailing-TG.jpg"]).unavailable { background: var(--panel); min-height: 18rem; display: grid; place-items: center; }
+
+.ph:has(img[src="img/mailing-TG.jpg"]).unavailable::after { content: "imgFalta el archivo mailing-TG.jpg"; color: var(--suave); font-size: .85rem; padding: 1rem; }
+
+.ph.unavailable img { display: none; }
+
+
+
+/* ===== Perfil ampliado: mismos colores y tipografías ===== */
+
+.profile-kicker { font-size: .85rem; font-weight: 600; letter-spacing: .08em; color: var(--lila); margin: 0 0 .65rem; }
+
+.profile-location { color: var(--suave); margin: 0 0 2rem; overflow-wrap: anywhere; }
+
+.profile-location a { color: var(--texto); }
+
+.resume-intro { max-width: 48rem; }
+
+.resume .sub { margin-top: 3rem; }
+
+.career-list { display: grid; gap: 1.75rem; }
+
+.career-entry { border-top: 1px solid rgba(255,255,255,.14); padding-top: 1.2rem; }
+
+.career-head { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: .4rem 1.25rem; }
+
+.career-head h4 { font-size: 1.25rem; }
+
+.career-head span, .career-role { color: var(--suave); }
+
+.career-head span { font-size: .9rem; }
+
+.career-role { margin: .35rem 0 .75rem; }
+
+.career-entry > p:last-child { margin-bottom: 0; }
+
+.career-bullets { margin: .75rem 0 0; padding-left: 1.35rem; max-width: 52rem; }
+
+.career-bullets li { margin-bottom: .55rem; }
+
+.career-bullets li::marker { color: var(--lila); }
+
+.resume .studies { row-gap: 2rem; }
+
+.resume .study h4 { margin-top: 0; }
+
+.resume .study p + p { margin-top: .55rem; }
+
+.tools-wide { max-width: 58rem; }
+
+.contact-actions { margin-top: 1.5rem; }
+
+.linkedin-button { display: inline-flex; align-items: center; gap: .5rem; border: 1px solid var(--lila); color: var(--texto); padding: .55rem 1rem; text-decoration: none; font-size: .95rem; font-weight: 600; border-radius: .25rem; }
+
+.linkedin-button:hover { background: var(--panel); color: #fff; }
+
+
+
+/* Corrección final: imágenes reales, sin marcos de relleno */
+
+.project-gallery .ph { background: transparent; border: 0; box-shadow: none; min-height: 0; height: auto; aspect-ratio: auto; }
+
+.project-gallery .ph img { position: static; width: 100%; height: auto; object-fit: contain; display: block; border: 0; box-shadow: none; }
+
+.project-gallery .gallery-item--email .ph { max-height: 34rem; overflow-y: auto; overflow-x: hidden; scrollbar-width: thin; }
+
+.project-gallery .ph.missing { min-height: 12rem; background: #231a3f; }
+
+.project-gallery .ph.missing::after { content: "Imagen pendiente: revisa la ruta src"; }
+
+@media(max-width:40rem) { .project-gallery .gallery-item--email .ph { max-height: 28rem; } }
+
+
+/* ===== GRUPO CASCADA · Mosaico compacto según wireframe ===== */
+.project-gallery.cascada-gallery {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr);
+  gap: 1.25rem 1.5rem;
+  align-items: start;
+  margin-top: 1.5rem;
+}
+.cascada-gallery .gallery-item { margin: 0; min-width: 0; }
+.cascada-gallery__mailing { grid-column: 1; grid-row: 1; }
+.cascada-gallery__right {
+  grid-column: 2;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  min-width: 0;
+}
+.cascada-gallery__kambukka { grid-column: 1 / -1; grid-row: 2; }
+.cascada-gallery .gallery-item .ph {
+  width: 100%; height: auto; min-height: 0; max-height: none;
+  aspect-ratio: auto; overflow: visible; background: transparent;
+  border: 0; display: block;
+}
+.cascada-gallery .gallery-item .ph img {
+  display: block; position: static; width: 100%; max-width: 100%;
+  height: auto; max-height: none; object-fit: contain; transform: none;
+}
+.cascada-gallery .gallery-item figcaption {
+  margin-top: .6rem; color: var(--suave);
+  font-size: .9rem; line-height: 1.45; text-align: left;
+}
+@media (max-width: 600px) {
+  .project-gallery.cascada-gallery { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; }
+  .cascada-gallery__mailing, .cascada-gallery__right,
+  .cascada-gallery__kambukka { grid-column: 1; grid-row: auto; }
+  .cascada-gallery__right { gap: 1.5rem; }
+}
